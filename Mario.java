@@ -1,57 +1,43 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package principal;
-
-class Mario {
-
-    private String nombre;
-    private int vida;
-    private int ataque;
-    private int defensa;
-    private int velocidad;
+package principal; 
+ 
+public class Mario {
     private int posicion;
+    private int velocidad;
+    private int puntosDeVida;
 
-    public Mario(String nombre, int vida, int ataque, int defensa, int velocidad) {
-        this.nombre = nombre;
-        this.vida = vida;
-        this.ataque = ataque;
-        this.defensa = defensa;
+    public Mario(int posicion, int velocidad, int puntosDeVida) {
+        this.posicion = posicion;
         this.velocidad = velocidad;
-    }
-
-    public void moverAdelante() {
-        System.out.println(nombre + " Mario se ha movido adelante.");
-        posicion++;
-    }
-
-    public void moverAtras() {
-        System.out.println(nombre + "Mario se ha movido Atras.");
-        posicion--;
+        this.puntosDeVida = puntosDeVida;
     }
 
     public void Salto() {
-
-        System.out.println(nombre + " Mario ha saltado");
+        System.out.println("Mario ha saltado");
     }
 
-    public void tocoHongo() {
-        vida = 0;
+    public void moverAdelante() {
+        posicion += velocidad;
     }
 
-    public int getVida() {
-        return vida;
+    public void moverAtras() {
+        posicion -= velocidad;
     }
 
     public int getPosicion() {
         return posicion;
     }
 
-    public void vida() {
-
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
     }
 
-   
+    public int getPuntosDeVida() {
+        return puntosDeVida;
+    }
+
+    public void setPuntosDeVida(int puntosDeVida) {
+        this.puntosDeVida = puntosDeVida;
+    }
+}
 
 }
