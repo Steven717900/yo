@@ -1,34 +1,29 @@
-package principal; 
- 
+
+package principal;
 public class Mario {
+
     private int posicion;
     private int velocidad;
     private int puntosDeVida;
+    private int puntos;
 
-    public Mario(int posicion, int velocidad, int puntosDeVida) {
+    public Mario(int posicion, int velocidad, int puntosDeVida, int puntos) {
         this.posicion = posicion;
-        this.velocidad = velocidad;
+        this.velocidad = velocidad ;
         this.puntosDeVida = puntosDeVida;
+        this.puntos = puntos;
     }
 
-    public void Salto() {
-        System.out.println("Mario ha saltado");
+    public void Salto(int salto) {
+       this.posicion += salto;
     }
 
-    public void moverAdelante() {
-        posicion += velocidad;
+    public void moverAdelante(int pasos) {
+        this.posicion += pasos;
     }
 
-    public void moverAtras() {
-        posicion -= velocidad;
-    }
-
-    public int getPosicion() {
-        return posicion;
-    }
-
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
+    public void moverAtras(int pasos) {
+        this.posicion -= pasos;
     }
 
     public int getPuntosDeVida() {
@@ -38,6 +33,12 @@ public class Mario {
     public void setPuntosDeVida(int puntosDeVida) {
         this.puntosDeVida = puntosDeVida;
     }
-}
 
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
 }
