@@ -1,37 +1,24 @@
 package principal;
 
-class Hongo {
+public class Hongo {
 
     private int posicion;
-
-    private String nombre;
-    private int vida;
-    private int ataque;
-    private int defensa;
     private int velocidad;
 
-    public Hongo(String nombre, int vida, int ataque, int defensa, int velocidad) {
-        this.nombre = nombre;
-        this.vida = vida;
+    public Hongo(int posicion, int velocidad) {
+        this.posicion = posicion;
         this.velocidad = velocidad;
     }
 
     public void moverAdelante() {
-        System.out.println(nombre + " Hongo se ha movido adelante.");
-        posicion++;
+        this.posicion += this.velocidad;
     }
 
     public void moverAtras() {
-        System.out.println(nombre + "Hongo se ha movido Atras.");
-        posicion--;
-    }
-
-    public void tocaMario(Mario mario) {
-        mario.tocoHongo();
+        this.posicion -= this.velocidad;
     }
 
     public int getPosicion() {
-        return posicion;
-
+        return this.posicion;
     }
 }
