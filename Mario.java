@@ -6,8 +6,10 @@ public class Mario {
     private int velocidad;
     private int puntosDeVida;
     private int puntos;
+    private String nombre;
 
-    public Mario(int posicion, int velocidad, int puntosDeVida, int puntos) {
+    public Mario(String nombre,int posicion, int velocidad, int puntosDeVida, int puntos) {
+        this.nombre = nombre;
         this.posicion = posicion;
         this.velocidad = velocidad ;
         this.puntosDeVida = puntosDeVida;
@@ -41,4 +43,12 @@ public class Mario {
     public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
+        public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
 }
